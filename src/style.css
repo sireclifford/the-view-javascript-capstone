@@ -13,10 +13,6 @@ body {
   height: 100%;
 }
 
-footer {
-  background-color: cadetblue;
-}
-
 #app {
   display: flex;
   justify-content: center;
@@ -43,6 +39,7 @@ header {
 }
 
 footer {
+  background-color: cadetblue;
   padding: 30px;
   display: flex;
   justify-content: center;
