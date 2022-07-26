@@ -41,3 +41,11 @@ header {
   width: 100px;
   height: 100px;
 }
+
+footer {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
