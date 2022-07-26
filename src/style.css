@@ -13,10 +13,6 @@ body {
   height: 100%;
 }
 
-footer {
-  background-color: cadetblue;
-}
-
 #app {
   display: flex;
   justify-content: center;
@@ -40,4 +36,13 @@ header {
 .logo {
   width: 100px;
   height: 100px;
+}
+
+footer {
+  background-color: cadetblue;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
