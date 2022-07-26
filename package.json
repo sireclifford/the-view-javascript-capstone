@@ -1,0 +1,33 @@
+{
+  "name": "the-view-javascript-capstone",
+  "version": "1.0.0",
+  "description": "A JavaScript capstone project to utilise APIs and frameworks. This project integrates Yify API to fetch movies. A user can comment and like their favorite movie.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sireclifford/the-view-javascript-capstone.git"
+  },
+  "keywords": [],
+  "authors": [
+    "Clifford Owusu",
+    "Anas Abubakar Bassi"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sireclifford/the-view-javascript-capstone/issues"
+  },
+  "homepage": "https://github.com/sireclifford/the-view-javascript-capstone#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
