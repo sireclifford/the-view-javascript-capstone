@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f5f5f5;
+  height: 100%;
+}
+
+header,
+footer {
+  background-color: cadetblue;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
+  display: grid;
+  column-gap: 130px;
+  row-gap: 60px;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: 500px 500px;
+  grid-auto-flow: row;
+}
+
+.movie-item {
+  color: #fff;
+  border-radius: 5px;
+  font-size: 150%;
+}
+
+.movie-item img.flyer {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border: 3px solid goldenrod;
+}
+
+.title img.like-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  font-size: 20px;
+  margin: 0;
+  color: #444;
+}
+
+.movie-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+button.comment-btn {
+  width: 80%;
+  background-color: bisque;
+  padding: 10px;
+  align-self: center;
+  border: 1px solid bisque;
+  border-radius: 20px;
+}
