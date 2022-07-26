@@ -28,18 +28,16 @@ footer {
 }
 
 header {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 .page-title {
-    align-self: end;
+  align-self: end;
 }
 
-
-
 .logo {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
