@@ -4,6 +4,8 @@ import logo from './assets/images/the-view-logo.png';
 import like from './assets/images/like.png';
 
 import fetchMovies from './modules/fetchMovies';
+import likeMovie from './modules/likeMovie';
+import getMovieLikes from './modules/getMovieLikes';
 
 const displayMoviesUI = (movies) => {
   const moviesList = document.querySelector('.main');
@@ -12,21 +14,54 @@ const displayMoviesUI = (movies) => {
     const movieEl = document.createElement('li');
     movieEl.classList.add('movie-item');
     movieEl.innerHTML = `
-       <div class="movie-item" id="${movie.id}">
+       <div class="movie-item">
             <img class="flyer" src="${movie.medium_cover_image}" alt="gray_man">
             <div class="movie-footer">
                 <div class="title">
                     <p>${movie.title_long}</p>
-                    <img class="like-icon" src="${like}" alt="like_icon">
+                    <img id="${movie.id}" class="like-icon" src="${like}" alt="like_icon">
                 </div>
+                <div class="likes">
+                    <p>${movie.likes} likes</p>
+                    </div>
                 <button type="submit" class="comment-btn">Comments</button>
             </div>
         </div>
         `;
     moviesList.appendChild(movieEl);
   });
+  const likeIcons = document.querySelectorAll('.like-icon');
+  likeIcons.forEach((icon) => {
+    icon.addEventListener('click', (e) => {
+      likeMovie(e.target.id)
+        .then(() => {
+          window.location.reload();
+        })
+        .catch(() => {
+        });
+    });
+  });
 };
 
 fetchMovies().then((response) => {
-  displayMoviesUI(response.data.data.movies);
+  const restructuredMovies = [];
+  getMovieLikes().then((res) => {
+    const likes = res.data;
+    const { movies } = response.data.data;
+    movies.forEach((movie) => {
+      const fm = likes.find((like) => like.item_id === String(movie.id));
+      if (fm) {
+        restructuredMovies.push({
+          ...movie,
+          likes: fm.likes,
+        });
+      } else {
+        restructuredMovies.push({
+          ...movie,
+          likes: 0,
+        });
+      }
+    });
+    displayMoviesUI(restructuredMovies);
+  });
 });
