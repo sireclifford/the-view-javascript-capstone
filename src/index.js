@@ -35,11 +35,9 @@ const displayMoviesUI = (movies) => {
     icon.addEventListener('click', (e) => {
       likeMovie(e.target.id)
         .then(() => {
-          alert('You liked the movie');
           window.location.reload();
         })
-        .catch((err) => {
-          alert(err);
+        .catch(() => {
         });
     });
   });
