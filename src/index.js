@@ -52,7 +52,7 @@ const displayMoviesUI = (movies) => {
         });
     });
   });
-};
+},
 
 fetchMovies().then((response) => {
   const restructuredMovies = [];
@@ -75,4 +75,4 @@ fetchMovies().then((response) => {
     });
     displayMoviesUI(restructuredMovies);
   });
-});
+}),)
