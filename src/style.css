@@ -72,7 +72,6 @@ footer {
   top: 50%;
   left: 50%;
   transition: 200ms ease-in-out;
-  transform: translate(-50%, -50%) scale(0);
   border-radius: 14px;
   z-index: 10;
   width: 80%;
@@ -80,7 +79,6 @@ footer {
   padding: 12px;
   overflow: scroll;
   display: none;
-  transform: translate(-50%, -50%) scale(1);
 }
 
 .comment-container {
