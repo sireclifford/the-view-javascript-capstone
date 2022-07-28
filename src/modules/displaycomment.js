@@ -1,14 +1,15 @@
-// const displayCommments = async (movieId) => {
-  
-//   try {
-//     const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/6MIoDJ3ru05goBGOD/comments?item_id=${itemId}`);
-//     const data = await response.json();
-//     console.log(data);
-//     return data; 
-//   } catch (error) {
-//     console.log(error);
-//   }
-    
-//   };
+const displayCommments = async (movieId) => {
+  const response = await fetch(
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/6MIoDJ3ru05goBGOD5Ex/comments?item_id=${movieId}`
+  )
+    .then((res) => {
+      if (!res.ok) {
+        Promise.reject(res);
+        return [];
+      }
+      return res.json();
+    });
+  return response;
+};
 
-// export default displayCommments;
+export default displayCommments;

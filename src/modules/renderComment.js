@@ -64,7 +64,6 @@ const createComment = async (movie) => {
   });
   const showComment = async (id) => {
     const comments = await displayCommments(id);
-    console.log(comments);
     const commentList = document.querySelector('.comments');
     comments.forEach((comment) => {
       const commentItem = document.createElement('li');
@@ -78,24 +77,21 @@ const createComment = async (movie) => {
     }
     );
   }
-
-  const inputName = document.querySelector('#username').value;
-  const inputComment = document.querySelector('#comment').value;
   const form = document.querySelector('.comments-form');
-  form.addEventListener('submit', (e) => {
-    console.log(inputName)
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    createComments({
-      "item_id": movie.id,
-      "username": inputName,
-      "comment": inputComment,
-  }).then((res) => {
-    console.log(res);
-  })
+    const username = document.querySelector('#username').value;
+    const comment = document.querySelector('#comment').value;
+    await createComments({
+      username,
+      comment,
+      item_Id: movie.id,
+    });
 
-
-  })
-  showComment(movie.id);
+    showComment(movie.id);
+    form.reset();
+  });
+  await showComment(movie.id);
 };
 
 export { createComment as default };
