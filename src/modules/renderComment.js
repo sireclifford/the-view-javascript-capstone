@@ -1,6 +1,7 @@
 /* eslint-disable*/
 import createComments from "./createComment";
 import displayCommments from "./displaycomment";
+import countComment from "./countComment";
 
 const popupSection = document.querySelector('.popup');
 const createComment = async (movie) => {
@@ -24,7 +25,7 @@ const createComment = async (movie) => {
       </div>
     </div>
     <div class="comment-section">
-      <h3>Comments</h3>
+      <h3 id="no-of-comments"></h3>
       <ul class="comments">
       </ul>
       <form class="comments-form">
@@ -55,6 +56,7 @@ const createComment = async (movie) => {
       </div>
       `;
       commentList.appendChild(commentItem);
+      countComment();
     }
     );
   }
