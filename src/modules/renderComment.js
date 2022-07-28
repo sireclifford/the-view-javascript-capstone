@@ -50,7 +50,7 @@ const createComment = async (movie) => {
       const commentItem = document.createElement('li');
       commentItem.innerHTML = `
       <div class="comment-item">
-        <p>${comment.username:}</p>
+        <p>${comment.username}:</p>
         <p> ${comment.comment}</p>
       </div>
       `;
