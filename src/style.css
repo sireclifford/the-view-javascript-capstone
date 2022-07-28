@@ -91,8 +91,8 @@ footer {
 
 .fa-solid {
   margin: 25px 0 0;
-  position: relative;
-  left: 50%;
+  position: fixed;
+  left: 85%;
 }
 
 .movie-details p {
@@ -119,6 +119,52 @@ footer {
   height: 80%;
   object-fit: cover;
   border: 3px solid goldenrod;
+}
+
+.border {
+  border: 3px solid goldenrod;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.comment-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.comments-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.comments-form input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid goldenrod;
+  padding: 10px;
+  margin: 10px;
+}
+
+.comments-form textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid goldenrod;
+  padding: 10px;
+  margin: 10px;
 }
 
 .title img.like-icon {
