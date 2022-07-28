@@ -26,25 +26,6 @@ const createComment = async (movie) => {
     <div class="comment-section">
       <h3>Comments</h3>
       <ul class="comments">
-        <li>
-        <div class="comment-item">
-        <p>name: </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-      </div>
-        </li>
-        <li>
-        <div class="comment-item">
-        <p>name: </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-      </div>
-        </li>
-        <li>
-        <div class="comment-item">
-        <p>name: </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-      </div>
-        </li>
-
       </ul>
       <form class="comments-form">
       <h3>Add a comment</h3>
@@ -69,8 +50,8 @@ const createComment = async (movie) => {
       const commentItem = document.createElement('li');
       commentItem.innerHTML = `
       <div class="comment-item">
-        <p>${comment.username}</p>
-        <p>${comment.comment}</p>
+        <p>${comment.username:}</p>
+        <p> ${comment.comment}</p>
       </div>
       `;
       commentList.appendChild(commentItem);
