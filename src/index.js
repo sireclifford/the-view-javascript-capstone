@@ -11,6 +11,8 @@ import likeMovie from './modules/likeMovie';
 import getMovieLikes from './modules/getMovieLikes';
 
 const displayMoviesUI = (movies) => {
+  const pageTitle = document.querySelector('.page-title');
+  pageTitle.innerHTML = `Popular movies (${movies.length})`;
   const moviesList = document.querySelector('.main');
   moviesList.innerHTML = '';
   movies.forEach((movie) => {
@@ -54,7 +56,7 @@ const displayMoviesUI = (movies) => {
         });
     });
   });
-}
+};
 
 fetchMovies().then((response) => {
   const restructuredMovies = [];
@@ -77,4 +79,4 @@ fetchMovies().then((response) => {
     });
     displayMoviesUI(restructuredMovies);
   });
-}); 
+});

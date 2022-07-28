@@ -1,5 +1,6 @@
-import axios from "axios";
-import { involvementBaseUrl, appId } from "../http-service";
+import axios from 'axios';
+import { involvementBaseUrl, appId } from '../http-service';
+
 const createComments = async (body) => {
   let response;
   await axios
@@ -24,7 +25,6 @@ const createComments = async (body) => {
     });
 
   return response;
-    
-  };
+};
 
 export default createComments;
