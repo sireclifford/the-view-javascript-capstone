@@ -17,7 +17,7 @@ const displayMoviesUI = (movies) => {
     const movieEl = document.createElement('li');
     movieEl.classList.add('movie-item');
     movieEl.innerHTML = `
-        <div class="movie-item" id="${movie.id}">
+        <div class="movie-item">
             <img class="flyer" src="${movie.medium_cover_image}" alt="gray_man">
             <div class="movie-footer">
                 <div class="title">
@@ -27,7 +27,7 @@ const displayMoviesUI = (movies) => {
                 <div class="likes">
                     <p>${movie.likes} likes</p>
                     </div>
-               <button id="${movie.imdb_code} "type="submit" class="comment-btn">Comments</button>
+              <button id="${movie.imdb_code}" type="submit" class="comment-btn">Comments</button>
             </div>
         </div>
         `;
@@ -41,6 +41,8 @@ const displayMoviesUI = (movies) => {
         createComment(response.data.data.movie);
         commentPopup.style.display = 'block';
       });
+    });
+  });
   const likeIcons = document.querySelectorAll('.like-icon');
   likeIcons.forEach((icon) => {
     icon.addEventListener('click', (e) => {
@@ -52,7 +54,7 @@ const displayMoviesUI = (movies) => {
         });
     });
   });
-},
+}
 
 fetchMovies().then((response) => {
   const restructuredMovies = [];
@@ -75,4 +77,4 @@ fetchMovies().then((response) => {
     });
     displayMoviesUI(restructuredMovies);
   });
-}),)
+}); 

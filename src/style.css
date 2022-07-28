@@ -69,8 +69,7 @@ footer {
 .popup {
   background-color: cadetblue;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 3%;
   transition: 200ms ease-in-out;
   border-radius: 14px;
   z-index: 10;
