@@ -21,6 +21,7 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   flex-direction: column;
+  position: relative;
 }
 
 header {
@@ -63,6 +64,54 @@ footer {
   color: #fff;
   border-radius: 5px;
   font-size: 150%;
+}
+
+.popup {
+  background-color: cadetblue;
+  position: fixed;
+  top: 3%;
+  transition: 200ms ease-in-out;
+  border-radius: 14px;
+  z-index: 10;
+  width: 80%;
+  height: 98%;
+  padding: 12px;
+  overflow: scroll;
+  display: none;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.fa-solid {
+  margin: 25px 0 0;
+  position: relative;
+  left: 50%;
+}
+
+.movie-details p {
+  width: 50%;
+}
+
+.movie-comment {
+  border-radius: 5px;
+  font-size: 150%;
+}
+
+.movie-feature {
+  display: flex;
+}
+
+.movie-comment img.flyer {
+  width: 35%;
+  object-fit: cover;
+  border: 3px solid goldenrod;
 }
 
 .movie-item img.flyer {

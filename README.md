@@ -1,15 +1,16 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# The Veiw
 
 > Description the project.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- Javascript
+- Webpack
 
 ## Live Demo (if available)
 
@@ -40,11 +41,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Anas Abubakar Bassi**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@anasbassi](https://github.com/anasbassi)
+- Twitter: [@anasabu92568449](https://twitter.com/anasabu92568449)
+- LinkedIn: [Anas Abubakar](https://linkedin.com/in/anas-abubakar-7b352722b)
 
 👤 **Author2**
 
