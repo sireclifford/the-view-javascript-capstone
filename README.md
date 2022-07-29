@@ -19,7 +19,7 @@ If you have installed git, you can clone the code to your machine.
 
 bash
 ```
-git clone https://github.com/sireclifford/leaderboard.git
+git clone https://github.com/sireclifford/the-view-javascript-capstone.git
 ```
 
 - Once the files are on your machine, open the _the-view-javascript-capstone_ folder in [Visual Studio Code](https://code.visualstudio.com/), and follow the steps in Installation & Set Up
