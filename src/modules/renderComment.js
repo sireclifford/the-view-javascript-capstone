@@ -25,7 +25,7 @@ const createComment = async (movie) => {
       </div>
     </div>
     <div class="comment-section">
-      <h3 id="no-of-comments"></h3>
+      <h3>Comments <span id="no-of-comments">0<span> </h3>
       <ul class="comments">
       </ul>
       <form class="comments-form">
