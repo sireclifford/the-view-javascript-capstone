@@ -26,26 +26,33 @@ body {
 
 header {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   gap: 20px;
+  border-bottom: 2px solid darkgoldenrod;
 }
 
 .page-title {
-  align-self: end;
+  align-self: center;
+  font-family: 'Playfair Display', serif;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 footer {
-  background-color: cadetblue;
+  border-top: 2px solid darkgoldenrod;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+.footer-text {
+  font-family: 'Playfair Display', serif;
 }
 
 .main {
@@ -67,17 +74,18 @@ footer {
 }
 
 .popup {
-  background-color: cadetblue;
   position: fixed;
-  top: 3%;
+  top: 0%;
   transition: 200ms ease-in-out;
   border-radius: 14px;
   z-index: 10;
   width: 80%;
-  height: 98%;
+  height: 100%;
   padding: 12px;
   overflow: scroll;
   display: none;
+  background-color: rgba(203, 198, 201, 0.639);
+  backdrop-filter: blur(4px);
 }
 
 .comment-container {
@@ -176,15 +184,23 @@ ul {
 }
 
 .title {
+  font-family: 'Amatic SC', cursive;
   display: flex;
   justify-content: space-between;
 }
 
+.single-movie-title,
+.movie-feature p,
+.comment-section h3 {
+  font-family: 'Amatic SC', cursive;
+}
+
 .title p {
-  font-size: 14px;
+  font-size: 20px;
   margin: 0;
   color: #444;
   width: 80%;
+  font-weight: bold;
 }
 
 .movie-footer {
@@ -201,6 +217,9 @@ button.comment-btn {
   align-self: center;
   border: 1px solid goldenrod;
   border-radius: 20px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 button.comment-btn:hover {
@@ -213,15 +232,6 @@ button.comment-btn:hover {
   border-radius: 20px;
 }
 
-/*
-.likes-tab {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-} */
-
 .likes {
   display: flex;
   justify-content: flex-end;
@@ -229,4 +239,5 @@ button.comment-btn:hover {
   color: black;
   padding: 0;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }

@@ -12,7 +12,7 @@ const createComment = async (movie) => {
     <i class="fa-solid fa-xmark"></i>
     <div>
       <img class="flyer" src="${movie.large_cover_image}" alt="gray_man">
-      <h2>${movie.title}</h2>
+      <h2 class="single-movie-title">${movie.title}</h2>
     </div>
     <div class="movie-details">
       <div class="movie-feature">
