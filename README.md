@@ -2,6 +2,8 @@
 
 > A minimal movie website created using JavaScript, HTML & CSS. This projects utilises an external API (yts.am) to fetch the movie data. By default, the parameters for the search has been set to display.
 
+## Presentation Link (Loom)
+https://www.loom.com/share/7cd4da981a084827aeba2e7274a5f121
 
 ## Built With
 
