@@ -1,6 +1,4 @@
 import './style.css';
-// eslint-disable-next-line no-unused-vars
-import logo from './assets/images/the-view-logo.png';
 import like from './assets/images/like.png';
 
 import fetchMovies from './modules/fetchMovies';

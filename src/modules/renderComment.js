@@ -1,7 +1,6 @@
-/* eslint-disable*/
-import createComments from "./createComment";
-import displayCommments from "./displaycomment";
-import countComment from "./countComment";
+import createComments from './createComment';
+import displayCommments from './displaycomment';
+import countComment from './countComment';
 
 const popupSection = document.querySelector('.popup');
 const createComment = async (movie) => {
@@ -42,7 +41,7 @@ const createComment = async (movie) => {
   const closePopup = document.querySelector('.fa-solid');
   closePopup.addEventListener('click', () => {
     commentPopup.style.display = 'none';
-    location.reload();
+    window.location.reload();
   });
   const showComment = async (id) => {
     const comments = await displayCommments(id);
@@ -51,15 +50,15 @@ const createComment = async (movie) => {
       const commentItem = document.createElement('li');
       commentItem.innerHTML = `
       <div class="comment-item">
+        <p class="date">${comment.creation_date} - </p>
         <p>${comment.username}:</p>
         <p> ${comment.comment}</p>
       </div>
       `;
       commentList.appendChild(commentItem);
       countComment();
-    }
-    );
-  }
+    });
+  };
   const form = document.querySelector('.comments-form');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
