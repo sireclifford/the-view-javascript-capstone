@@ -8,6 +8,7 @@
 - HTML
 - CSS
 - Javascript
+- NodeJs
 - Webpack
 
 ## Getting Started
